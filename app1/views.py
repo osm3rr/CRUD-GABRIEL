@@ -2,7 +2,9 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 
 from django.views.generic.edit import UpdateView, CreateView
+from django.views.generic.edit import DeleteView
 from .models import Publicaciones
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -26,4 +28,12 @@ class CreatePageView(CreateView):
     template_name= "post_create.html"
     model=Publicaciones
     fields=["titulo","descripcion"]
+    
+
+class DeletePageView(DeleteView):
+
+    template_name="post_delete.html"
+    model=Publicaciones
+    success_url=reverse_lazy("home")
+
 

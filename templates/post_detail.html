@@ -8,7 +8,8 @@
     <h2>{{object.titulo}}</h2>
     <p>{{object.descripcion}}</p>
 
-    <a href="{% url 'update' object.pk %}">actualizar</a>
+    <a href="{% url 'update' object.pk %}">Actualizar</a>
+    <a href="{% url 'delete' object.pk %}">Borrar</a>
 
 
 {% endblock %}
