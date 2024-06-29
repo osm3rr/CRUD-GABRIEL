@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for publicacion in publicaciones_list %}
+
+        <p><a href="{% url 'detail' publicacion.pk %}"> {{ publicacion.titulo }}</a>
+
+    {% endfor %}</p>
+
+    <p><a href="{% url 'create' %}"><input type="submit" value="Crear Post"></a></p>
+    
+{% endblock %}  
