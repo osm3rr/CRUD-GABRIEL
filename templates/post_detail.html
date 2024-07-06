@@ -8,6 +8,10 @@
     <h2>{{object.titulo}}</h2>
     <p>{{object.descripcion}}</p>
 
+    {% if object.image %}
+    <img src="{{ object.image.url }}" alt="">
+    {% endif %}
+
     <a href="{% url 'update' object.pk %}">Actualizar</a>
     <a href="{% url 'delete' object.pk %}">Borrar</a>
 
