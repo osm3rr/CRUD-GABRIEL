@@ -22,12 +22,14 @@ class UpdatePageView(UpdateView):
     template_name="post_update.html"
     model= Publicaciones
     fields=["titulo","descripcion"]
+    success_url=reverse_lazy("home")
     
 class CreatePageView(CreateView):
 
     template_name= "post_create.html"
     model=Publicaciones
     fields=["titulo","descripcion"]
+    success_url=reverse_lazy("home")
     
 
 class DeletePageView(DeleteView):

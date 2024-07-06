@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    {% if user.is_authenticated %}
+
+        <h2>Hola {{user.username}} </h2>
+
+        <p><a href="{% url 'home' %}">Twitter</a></p>
+
+        <a href="{% url 'logout' %}">Log out</a>
+
+    {% else %}
+
+        <p>Ingresa tus datos para poder acceder a la aplicacion</p>
+
+        <a href="{% url 'login' %}">Log in</a>
+
+    {% endif %}
+
+        <p>Si no tienes una cuenta puedes registrarte haciendo click aca</p>
+        <a href="{% url 'signup' %}">Sign up</a>
+
+
+    
+</body>
+</html>
