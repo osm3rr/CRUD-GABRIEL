@@ -30,6 +30,9 @@ class CreatePageView(CreateView):
     model=Publicaciones
     fields=["titulo","descripcion","image"]
     success_url=reverse_lazy("home")
+
+
+
     
 
 class DeletePageView(DeleteView):

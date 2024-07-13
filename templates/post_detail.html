@@ -9,7 +9,7 @@
     <p>{{object.descripcion}}</p>
 
     {% if object.image %}
-    <img src="{{ object.image.url }}" alt="">
+    <img src="{{ object.image.url }}" >
     {% endif %}
 
     <a href="{% url 'update' object.pk %}">Actualizar</a>
